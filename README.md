@@ -666,7 +666,7 @@ footer {
         </div>
       </div>
       <div class="image-frame reveal">
-        <img src="we-believe.jpg" alt="Dunia Visual Kreatif — We Believe" loading="lazy">
+      <img src="./images/we-believe.jpg" alt="Dunia Visual Kreatif — We Believe" loading="lazy">
       </div>
     </div>
   </section>
@@ -675,7 +675,7 @@ footer {
   <section class="section" id="about">
     <div class="container about-grid">
       <div class="image-frame reveal">
-        <img src="about-us.jpg" alt="Dunia Visual Kreatif — About Us" loading="lazy">
+        <img src="./images/about-us.jpg" alt="Dunia Visual Kreatif — About Us" loading="lazy">
       </div>
       <div class="reveal">
         <div class="eyebrow">02 / About Us</div>
@@ -799,7 +799,7 @@ footer {
       <div class="work-grid">
         <article class="work-card reveal">
           <div class="image-frame">
-            <img src="brand-campaigns.jpg" alt="Brand Campaigns" loading="lazy">
+            <img src="./images/brand-campaigns.jpg" alt="Brand Campaigns" loading="lazy">
           </div>
           <div class="work-label">01 / Brand</div>
           <h3>Brand Campaigns</h3>
@@ -808,7 +808,7 @@ footer {
 
         <article class="work-card reveal">
           <div class="image-frame">
-            <img src="music-campaigns.jpg" alt="Music Campaigns" loading="lazy">
+            <img src="./images/music-campaigns.jpg" alt="Music Campaigns" loading="lazy">
           </div>
           <div class="work-label">02 / Music</div>
           <h3>Music Campaigns</h3>
@@ -817,7 +817,7 @@ footer {
 
         <article class="work-card reveal">
           <div class="image-frame">
-            <img src="creator-campaigns.jpg" alt="Creator Campaigns" loading="lazy">
+            <img src="./images/creator-campaigns.jpg" alt="Creator Campaigns" loading="lazy">
           </div>
           <div class="work-label">03 / Creator</div>
           <h3>Creator Campaigns</h3>
