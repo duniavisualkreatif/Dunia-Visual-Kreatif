@@ -1499,10 +1499,7 @@ footer {
 
                 <div class="logo-box">
 
-                    <img
-                        src="images/maybelline.png"
-                        alt="Maybelline"
-                    >
+                    <img src="maybelline.png" alt="Maybelline">
 
                 </div>
 
@@ -1510,7 +1507,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/implora.png"
+                        src="implora.png"
                         alt="Implora"
                     >
 
@@ -1520,7 +1517,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/dettol.png"
+                        src="dettol.png"
                         alt="Dettol"
                     >
 
@@ -1530,7 +1527,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/veet.png"
+                        src="veet.png"
                         alt="Veet"
                     >
 
@@ -1540,7 +1537,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/somethinc.png"
+                        src="somethinc.png"
                         alt="Somethinc"
                     >
 
@@ -1550,7 +1547,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/purbasari.png"
+                        src="purbasari.png"
                         alt="Purbasari"
                     >
 
@@ -1560,7 +1557,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/madame-gie.png"
+                        src="madame-gie.png"
                         alt="Madame Gie"
                     >
 
@@ -1597,7 +1594,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/universal-music-group.png"
+                        src="universal-music-group.png"
                         alt="Universal Music Group"
                     >
 
@@ -1607,7 +1604,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/atlantic-records.png"
+                        src="atlantic-records.png"
                         alt="Atlantic Records"
                     >
 
@@ -1617,7 +1614,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/darkroom-records.png"
+                        src="darkroom-records.png"
                         alt="Darkroom Records"
                     >
 
@@ -1627,7 +1624,7 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="images/interscope-records.png"
+                        src="interscope-records.png"
                         alt="Interscope Records"
                     >
 
