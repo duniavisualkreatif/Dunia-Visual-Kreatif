@@ -1519,8 +1519,8 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="dettol.png"
-                        alt="Dettol"
+                        src="sidomuncul.png"
+                        alt="Sido Muncul"
                     >
 
                 </div>
@@ -1559,8 +1559,8 @@ footer {
                 <div class="logo-box">
 
                     <img
-                        src="madame-gie.png"
-                        alt="Madame Gie"
+                        src="shinzui.png"
+                        alt="Shinzui"
                     >
 
                 </div>
