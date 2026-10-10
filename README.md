@@ -1499,7 +1499,7 @@ footer {
 
                 <div class="logo-box">
 
-                    <img src="image/maybelline.png" alt="Maybelline">
+                    <img src="maybelline.png" alt="Maybelline">
 
                 </div>
 
