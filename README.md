@@ -168,7 +168,7 @@ nav {
   background:
     linear-gradient(90deg, rgba(12,9,7,.94) 0%, rgba(18,13,9,.77) 52%, rgba(18,13,9,.35) 100%),
     linear-gradient(0deg, rgba(16,13,10,.85), transparent 45%),
-    url("homepage-bg.jpg") center/cover no-repeat,
+    url("./images/homepage-bg.jpg") center/cover no-repeat,
     #21170f;
 }
 
