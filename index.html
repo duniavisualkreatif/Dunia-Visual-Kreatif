@@ -669,7 +669,7 @@ a {
   background:
     radial-gradient(
       ellipse at 15% 45%,
-      rgba(255, 0, 0, 0.8)
+      rgba(190, 145, 65, 0.12)
       transparent 48%
     ),
     radial-gradient(
@@ -729,6 +729,33 @@ a {
     animation: none;
   }
 }
+  }
+}
+  
+/* DVK — SLOW GOLD GLOW ANIMATION */
+.belief {
+  background:
+    radial-gradient(
+      ellipse at 20% 50%,
+      rgba(199, 165, 106, 0.24),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 80% 40%,
+      rgba(212, 175, 100, 0.12),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #1d1711, #100d0a 75%);
+  background-size: 200% 200%;
+  animation: dvkBeliefGlow 16s ease-in-out infinite alternate;
+}
+
+@keyframes dvkBeliefGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }
 </style>
