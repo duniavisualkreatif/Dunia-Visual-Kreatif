@@ -159,44 +159,29 @@ nav {
 }
 
 
+
 /* HERO */
 .hero {
   min-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   isolation: isolate;
   background: #100d0a;
 }
 
-/* CINEMATIC VIDEO */
-
+/* CINEMATIC VIDEO BACKGROUND */
 .hero-video {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
   z-index: 0;
-}
-
-.hero-video-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(12, 9, 7, 0.65),
-    rgba(18, 13, 9, 0.35)
-  ),
-  linear-gradient(
-    0deg,
-    rgba(16, 13, 10, 0.75),
-    transparent 70%
-  );
-  z-index: 1;
-  pointer-events: none;
 }
 
 /* DARK LUXURY OVERLAY */
@@ -206,16 +191,16 @@ nav {
   background:
     linear-gradient(
       90deg,
-      rgba(12, 9, 7, 0.78) 0%,
-      rgba(18, 13, 9, 0.42) 52%,
-      rgba(18, 13, 9, 0.38) 100%
+      rgba(12, 9, 7, 0.62) 0%,
+      rgba(18, 13, 9, 0.30) 50%,
+      rgba(18, 13, 9, 0.48) 100%
     ),
     linear-gradient(
       0deg,
-      rgba(16, 13, 10, 0.78),
-      transparent 65%
+      rgba(16, 13, 10, 0.78) 0%,
+      transparent 70%
     );
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -229,22 +214,31 @@ nav {
     rgba(199, 165, 106, 0.16),
     transparent 38%
   );
-  pointer-events: none;
   z-index: 2;
+  pointer-events: none;
 }
 
+/* HERO CONTENT */
 .hero-content {
-position: relative;
-z-index: 3;
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 90px;
+  text-align: center;
 }
 
+/* HEADLINE */
 .hero h1 {
-  font-size: clamp(42px, 6.5vw, 82px);
+  width: 100%;
   max-width: 1100px;
   margin: 22px auto 0;
+  font-size: clamp(42px, 6.5vw, 82px);
   letter-spacing: -2px;
   line-height: 1.12;
   text-align: center;
+  overflow-wrap: normal;
 }
 
 .hero h1 span {
@@ -254,6 +248,40 @@ z-index: 3;
   font-weight: 400;
 }
 
+/* HERO DESCRIPTION */
+.hero-description {
+  color: #d0c5b6;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 28px auto 35px;
+  text-align: center;
+}
+
+/* HERO BUTTONS */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* HERO BOTTOM */
+.hero-bottom {
+  position: absolute;
+  bottom: 32px;
+  left: 5%;
+  right: 5%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #c4b8a7;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 .hero-description {
   color: #d0c5b6;
   font-size: 15px;
