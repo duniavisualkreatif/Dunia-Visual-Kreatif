@@ -610,6 +610,45 @@ footer {
   visibility: visible !important;
   filter: none !important;
 }
+  
+/* DVK — Elegant Hover Animations */
+
+img {
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+img:hover {
+  transform: scale(1.025);
+}
+
+button,
+.btn {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(212, 175, 55, 0.18);
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 </style>
 </head>
 
