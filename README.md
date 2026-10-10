@@ -1,1841 +1,978 @@
+
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Dunia Visual Kreatif — Creative & Marketing Agency</title>
+<meta name="description" content="Dunia Visual Kreatif adalah creative & marketing agency yang membantu brand, music label, dan talent membangun campaign yang relevan, kreatif, dan menghasilkan dampak nyata.">
 
-<meta name="description" content="Dunia Visual Kreatif adalah creative & marketing agency yang membantu brand, music label, dan talent membangun campaign yang relevan, kreatif, dan menghasilkan dampak nyata">
+<meta name="theme-color" content="#100d0a">
 
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
 :root {
-    --midnight: #000A18;
-    --deep-navy: #00152B;
-    --blue: #009DFF;
-    --cyan: #00C8FF;
-    --white: #FFFFFF;
-    --text: #D7E7F4;
-    --muted: #8195A8;
-    --border: rgba(255,255,255,0.10);
+  --black: #100d0a;
+  --dark: #17120e;
+  --brown: #302218;
+  --gold: #c7a56a;
+  --gold-light: #ead5a5;
+  --white: #f6f1e8;
+  --muted: #b5aa9a;
+  --line: rgba(199,165,106,.24);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at 50% 15%, rgba(0,157,255,0.15), transparent 30%),
-        linear-gradient(
-            135deg,
-            var(--midnight),
-            var(--deep-navy),
-            #000914,
-            var(--midnight)
-        );
-    background-size: 180% 180%;
-    animation: backgroundMove 18s ease infinite;
-    color: var(--white);
-    overflow-x: hidden;
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-@keyframes backgroundMove {
-    0% {
-        background-position: 0% 50%;
-    }
+a { color: inherit; text-decoration: none; }
 
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
+img { display: block; max-width: 100%; }
 
 .container {
-    width: min(1180px, 90%);
-    margin: auto;
+  width: min(1160px, 90%);
+  margin: auto;
 }
 
-section {
-    position: relative;
-    padding: 120px 0;
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-/* =========================
-   BACKGROUND EFFECT
-========================= */
-
-.energy {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: -1;
+h1, h2, h3 {
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -.8px;
 }
 
-.energy-line {
-    position: absolute;
-    width: 800px;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(0,157,255,0.35),
-        rgba(0,200,255,0.8),
-        transparent
-    );
-    filter: blur(1px);
-    opacity: 0.35;
+h2 { font-size: clamp(32px, 5vw, 58px); }
+
+.section {
+  padding: 110px 0;
+  position: relative;
 }
 
-.energy-line:nth-child(1) {
-    top: 18%;
-    left: -200px;
-    transform: rotate(25deg);
-    animation: energyOne 13s linear infinite;
-}
+.gold { color: var(--gold-light); }
 
-.energy-line:nth-child(2) {
-    top: 55%;
-    right: -250px;
-    transform: rotate(-22deg);
-    animation: energyTwo 17s linear infinite;
-}
-
-.energy-line:nth-child(3) {
-    bottom: 10%;
-    left: 10%;
-    transform: rotate(-12deg);
-    animation: energyThree 15s linear infinite;
-}
-
-@keyframes energyOne {
-    from {
-        transform: translateX(-300px) rotate(25deg);
-    }
-
-    to {
-        transform: translateX(1600px) rotate(25deg);
-    }
-}
-
-@keyframes energyTwo {
-    from {
-        transform: translateX(300px) rotate(-22deg);
-    }
-
-    to {
-        transform: translateX(-1600px) rotate(-22deg);
-    }
-}
-
-@keyframes energyThree {
-    from {
-        transform: translateX(-400px) rotate(-12deg);
-    }
-
-    to {
-        transform: translateX(1300px) rotate(-12deg);
-    }
-}
-
-.glow {
-    position: fixed;
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    background: radial-gradient(
-        circle,
-        rgba(0,157,255,0.13),
-        transparent 70%
-    );
-    pointer-events: none;
-    z-index: -1;
-}
-
-.glow-one {
-    top: 5%;
-    left: -150px;
-}
-
-.glow-two {
-    bottom: 0;
-    right: -150px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 22px 0;
-    background: rgba(0,10,24,0.55);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-.nav-container {
-    width: min(1200px, 90%);
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.logo span {
-    color: var(--cyan);
-}
-
-.nav-menu {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-}
-
-.nav-menu a {
-    font-size: 13px;
-    color: #AFC1D0;
-    transition: 0.3s;
-}
-
-.nav-menu a:hover {
-    color: var(--cyan);
-}
-
-.nav-button {
-    padding: 11px 20px;
-    border: 1px solid rgba(0,200,255,0.5);
-    border-radius: 30px;
-    color: white !important;
-    background: rgba(0,157,255,0.08);
-    transition: 0.3s;
-}
-
-.nav-button:hover {
-    background: rgba(0,157,255,0.2);
-    box-shadow: 0 0 25px rgba(0,157,255,0.25);
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-.hero-content {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-small {
-    font-size: 12px;
-    letter-spacing: 4px;
-    color: var(--cyan);
-    margin-bottom: 25px;
-    text-transform: uppercase;
-}
-
-.hero h1 {
-    font-size: clamp(50px, 8vw, 105px);
-    line-height: 0.95;
-    letter-spacing: -4px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.hero h1 span {
-    background: linear-gradient(
-        90deg,
-        #FFFFFF,
-        #6EDBFF,
-        #009DFF
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-description {
-    max-width: 700px;
-    margin: 35px auto;
-    color: var(--text);
-    line-height: 1.8;
-    font-size: 16px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.section-intro {
+  max-width: 650px;
+  color: var(--muted);
+  margin-top: 24px;
 }
 
 .btn {
-    padding: 15px 28px;
-    border-radius: 30px;
-    font-size: 13px;
-    transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 23px;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .3s ease;
 }
 
-.btn-primary {
-    background: linear-gradient(
-        90deg,
-        var(--blue),
-        var(--cyan)
-    );
-    color: #00101c;
-    font-weight: 700;
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 35px rgba(0,157,255,0.35);
+.btn-filled {
+  background: var(--gold);
+  color: var(--black);
 }
 
-.btn-secondary {
-    border: 1px solid rgba(255,255,255,0.18);
-    color: white;
+.btn-filled:hover {
+  background: var(--gold-light);
 }
 
-.btn-secondary:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
+/* NAVIGATION */
+nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  padding: 20px 0;
+  background: rgba(16,13,10,.86);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(199,165,106,.12);
 }
 
-.hero-tags {
-    margin-top: 35px;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 2px;
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
 
-/* =========================
-   CENTRAL LIGHT
-========================= */
-
-.hero-light {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(
-        circle,
-        rgba(0,157,255,0.18),
-        transparent 68%
-    );
-    animation: pulse 5s ease-in-out infinite;
-    pointer-events: none;
+.logo {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-@keyframes pulse {
-    0%,100% {
-        transform: translate(-50%, -50%) scale(0.85);
-        opacity: 0.6;
-    }
-
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
-        opacity: 1;
-    }
+.logo span {
+  display: block;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 4px;
+  margin-top: 4px;
 }
 
-/* =========================
-   SECTION TITLE
-========================= */
-
-.section-label {
-    color: var(--cyan);
-    font-size: 11px;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
 }
 
-.section-title {
-    font-size: clamp(35px, 5vw, 65px);
-    letter-spacing: -2px;
-    line-height: 1;
-    max-width: 850px;
+.nav-links a {
+  color: #ded5c8;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.section-description {
-    margin-top: 25px;
-    color: var(--text);
-    line-height: 1.8;
-    max-width: 700px;
+.nav-links a:hover { color: var(--gold-light); }
+
+.menu-toggle {
+  display: none;
+  color: var(--gold-light);
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
-/* =========================
-   BELIEF
-========================= */
+/* HERO */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(12,9,7,.94) 0%, rgba(18,13,9,.77) 52%, rgba(18,13,9,.35) 100%),
+    linear-gradient(0deg, rgba(16,13,10,.85), transparent 45%),
+    url("homepage-bg.jpg") center/cover no-repeat,
+    #21170f;
+}
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 76% 45%, rgba(199,165,106,.16), transparent 38%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 90px;
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 8vw, 100px);
+  max-width: 950px;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: var(--gold-light);
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-description {
+  color: #d0c5b6;
+  font-size: 15px;
+  max-width: 590px;
+  margin: 28px 0 35px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 32px;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  color: #c4b8a7;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* IMAGE BLOCKS */
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #352719, #17110c);
+  border: 1px solid var(--line);
+  min-height: 300px;
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform .7s ease;
+}
+
+.image-frame:hover img { transform: scale(1.04); }
+
+.image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(10,8,6,.45), transparent 60%);
+  pointer-events: none;
+}
+
+/* BELIEF */
 .belief {
-    text-align: center;
+  background: linear-gradient(135deg, #1d1711, #100d0a 75%);
 }
 
-.belief .section-title {
-    margin: auto;
+.belief-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
 }
 
-.quote {
-    font-size: clamp(22px, 3vw, 34px);
-    line-height: 1.4;
-    max-width: 900px;
-    margin: 50px auto 30px;
-    color: white;
+.belief h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
 }
 
-.belief-text {
-    max-width: 720px;
-    margin: auto;
-    color: var(--muted);
-    line-height: 1.9;
+.belief-copy {
+  color: var(--muted);
+  margin-top: 25px;
+  font-size: 14px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+.belief-copy p + p { margin-top: 17px; }
 
+/* ABOUT */
 .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 75px;
+  align-items: center;
 }
 
-.about-text {
-    color: var(--text);
-    line-height: 1.9;
+.about-copy { color: var(--muted); font-size: 14px; }
+.about-copy p + p { margin-top: 18px; }
+
+.process {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--gold-light);
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 2.2;
 }
 
-.strategy-line {
-    margin-top: 35px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: var(--cyan);
-}
+/* SERVICES */
+.services { background: #17120e; }
 
-/* =========================
-   SERVICES
-========================= */
+.services-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 48px;
+}
 
 .services-grid {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
 }
 
 .service-card {
-    padding: 35px;
-    min-height: 300px;
-    border: 1px solid var(--border);
-    background: rgba(255,255,255,0.025);
-    backdrop-filter: blur(15px);
-    transition: 0.4s;
+  padding: 32px 25px 32px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(0,200,255,0.35);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+.service-card:nth-child(odd) {
+  border-right: 1px solid var(--line);
 }
+
+.service-card:nth-child(even) { padding-left: 30px; }
 
 .service-number {
-    color: var(--cyan);
-    font-size: 12px;
-    letter-spacing: 2px;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 17px;
 }
 
-.service-card h3 {
-    margin: 20px 0;
-    font-size: 27px;
+.service-card h3 { font-size: 24px; margin-bottom: 16px; }
+
+.service-card ul {
+  list-style: none;
+  color: var(--muted);
+  font-size: 13px;
 }
 
-.service-card p {
-    color: var(--muted);
-    line-height: 1.7;
+.service-card li { margin: 7px 0; }
+
+.service-card li::before {
+  content: "—";
+  color: var(--gold);
+  margin-right: 10px;
 }
 
-.service-list {
-    margin-top: 25px;
-    list-style: none;
-    color: #AFC1D0;
-    font-size: 13px;
-    line-height: 2;
-}
-
-.service-list li::before {
-    content: "→ ";
-    color: var(--cyan);
-}
-
-/* =========================
-   WORK
-========================= */
-
+/* WORK */
 .work-grid {
-    margin-top: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 45px;
 }
 
-.work-card {
-    min-height: 280px;
-    padding: 30px;
-    border: 1px solid var(--border);
-    background:
-        linear-gradient(
-            145deg,
-            rgba(0,157,255,0.10),
-            rgba(255,255,255,0.02)
-        );
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    transition: 0.4s;
-}
+.work-card { min-width: 0; }
 
-.work-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--cyan);
-}
+.work-card .image-frame { min-height: 330px; }
 
-.work-number {
-    color: var(--cyan);
-    font-size: 12px;
-    margin-bottom: auto;
-}
+.work-card .image-frame img { min-height: 330px; }
 
-.work-card h3 {
-    font-size: 28px;
-}
+.work-card h3 { font-size: 22px; margin-top: 23px; }
 
 .work-card p {
-    color: var(--muted);
-    margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 10px;
 }
 
-/* =========================
-   NUMBERS
-========================= */
+.work-label {
+  color: var(--gold);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
 
+/* STATS */
 .stats {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+  background: linear-gradient(110deg, #2a1d12, #17110c);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--border);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 25px;
 }
 
-.stat {
-    padding: 45px 25px;
-    text-align: center;
-    background: var(--midnight);
-}
+.stat-item { padding: 10px 0; }
 
 .stat-number {
-    font-size: 48px;
-    font-weight: 700;
-    background: linear-gradient(
-        90deg,
-        white,
-        var(--cyan)
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: var(--gold-light);
+  font-family: Georgia, serif;
+  font-size: clamp(35px, 5vw, 56px);
+  line-height: 1.2;
 }
 
 .stat-label {
-    margin-top: 10px;
-    color: var(--muted);
-    font-size: 12px;
-    letter-spacing: 1px;
+  color: #c3b6a5;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 12px;
 }
 
-/* =========================
-   PARTNERS
-========================= */
+/* PARTNERS */
+.partners { text-align: center; }
 
-.partners-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 30px;
+.partner-group { margin-top: 50px; }
+
+.partner-heading {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
-
-.partner-category {
-    margin-top: 70px;
-}
-
-.partner-category h3 {
-    font-size: 12px;
-    color: var(--cyan);
-    letter-spacing: 3px;
-    margin-bottom: 25px;
-}
-
-/* LOGO WALL */
 
 .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo-box {
-    height: 120px;
-    border: 1px solid rgba(255,255,255,0.08);
-    background: rgba(255,255,255,0.025);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-    transition: 0.4s;
-    position: relative;
-    overflow: hidden;
-}
-
-.logo-box::before {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(
-        circle,
-        rgba(0,200,255,0.12),
-        transparent 70%
-    );
-    opacity: 0;
-    transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 155px;
+  height: 90px;
+  padding: 15px;
+  border: 1px solid rgba(199,165,106,.13);
+  background: rgba(255,255,255,.025);
+  transition: .3s ease;
 }
 
 .logo-box:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0,200,255,0.35);
-    box-shadow: 0 15px 40px rgba(0,157,255,0.12);
+  border-color: var(--gold);
+  background: rgba(199,165,106,.07);
 }
-
-.logo-box:hover::before {
-    opacity: 1;
-}
-
-```css
-/* ACTUAL LOGOS */
 
 .logo-box img {
-    position: relative;
-    z-index: 2;
-
-    display: block;
-    max-width: 150px;
-    max-height: 55px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-
-    /* Logo tetap terlihat tanpa hover */
-    filter: grayscale(100%) brightness(0) invert(1);
-    opacity: 0.85;
-    visibility: visible;
-
-    transition:
-        transform 0.4s ease,
-        opacity 0.4s ease,
-        filter 0.4s ease;
+  max-width: 125px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: .8;
+  transition: .3s ease;
 }
 
-/* Hover effect */
 .logo-box:hover img {
-    filter: none;
-    opacity: 1;
-    transform: scale(1.07);
+  filter: none;
+  opacity: 1;
 }
-```
 
-/* =========================
-   CONTACT
-========================= */
-
+/* CONTACT */
 .contact {
-    text-align: center;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(156,108,52,.15), transparent 45%),
+    #17120e;
 }
 
-.contact .section-title {
-    margin: auto;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.contact-description {
-    max-width: 650px;
-    margin: 30px auto;
-    color: var(--muted);
-    line-height: 1.8;
+.contact h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
 }
 
-.contact-info {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.contact-text {
+  color: var(--muted);
+  max-width: 570px;
+  margin-top: 22px;
 }
 
-.contact-item {
-    padding: 15px 22px;
-    border: 1px solid var(--border);
-    background: rgba(255,255,255,0.025);
-    transition: 0.3s;
+.contact-details {
+  border-left: 1px solid var(--line);
+  padding-left: 30px;
 }
 
-.contact-item:hover {
-    border-color: var(--cyan);
-    color: var(--cyan);
+.contact-item { margin: 22px 0; }
+
+.contact-item small {
+  display: block;
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 7px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.contact-item a {
+  overflow-wrap: anywhere;
+  color: var(--white);
+  font-size: 14px;
+}
 
 footer {
-    border-top: 1px solid var(--border);
-    padding: 50px 0;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+  background: #100d0a;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #a89c8d;
+  font-size: 11px;
 }
 
-.footer-logo {
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.footer-description {
-    margin-top: 10px;
-    color: var(--muted);
-    font-size: 12px;
-}
-
-.footer-right {
-    color: var(--muted);
-    font-size: 11px;
-    text-align: right;
-}
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
+/* REVEAL */
 .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 0.8s ease;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s ease, transform .7s ease;
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
 
-.mobile-menu {
+@media (max-width: 900px) {
+  .nav-links { gap: 15px; }
+  .nav-links a { font-size: 10px; }
+  .belief-grid, .about-grid { gap: 35px; }
+  .work-grid { grid-template-columns: 1fr 1fr; }
+  .work-card:last-child { grid-column: 1 / -1; }
+  .work-card:last-child .image-frame { min-height: 280px; }
+  .work-card:last-child .image-frame img { min-height: 280px; }
+}
+
+@media (max-width: 680px) {
+  .section { padding: 75px 0; }
+  nav { padding: 16px 0; }
+  .menu-toggle { display: block; }
+  .nav-links {
     display: none;
-    font-size: 25px;
-    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #17120e;
+    padding: 22px 5%;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .nav-links.open { display: flex; }
+  .hero { min-height: 90vh; }
+  .hero h1 { letter-spacing: -1.5px; }
+  .hero-description { font-size: 14px; }
+  .hero-bottom { font-size: 8px; letter-spacing: 1px; }
+  .belief-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+  .belief-grid .image-frame { order: 2; }
+  .services-heading { align-items: flex-start; flex-direction: column; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card, .service-card:nth-child(even) {
+    padding: 25px 0;
+    border-right: 0;
+  }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-card:last-child { grid-column: auto; }
+  .work-card .image-frame, .work-card .image-frame img { min-height: 270px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 15px; }
+  .logo-box { width: 125px; height: 75px; padding: 10px; }
+  .logo-box img { max-width: 105px; max-height: 42px; }
+  .contact-details { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+  .footer-inner { flex-direction: column; }
 }
-
-@media(max-width: 900px) {
-
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 75px;
-        left: 5%;
-        width: 90%;
-        padding: 25px;
-        flex-direction: column;
-        background: rgba(0,10,24,0.96);
-        border: 1px solid var(--border);
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .logo-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .partners-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-right {
-        text-align: left;
-    }
-}
-
-@media(max-width: 500px) {
-
-    section {
-        padding: 90px 0;
-    }
-
-    .hero h1 {
-        letter-spacing: -2px;
-    }
-
-    .logo-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .logo-box {
-        height: 95px;
-        padding: 15px;
-    }
-
-    .logo-box img {
-        max-width: 110px;
-        max-height: 40px;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 </style>
 </head>
 
-
 <body>
 
-<!-- =========================
-     BACKGROUND
-========================= -->
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#home">
+      DUNIA VISUAL KREATIF
+      <span>CREATIVE & MARKETING</span>
+    </a>
 
-<div class="energy">
-    <div class="energy-line"></div>
-    <div class="energy-line"></div>
-    <div class="energy-line"></div>
-</div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
 
-<div class="glow glow-one"></div>
-<div class="glow glow-two"></div>
-
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
-<nav class="navbar">
-
-    <div class="nav-container">
-
-        <a href="#home" class="logo">
-            DUNIA <span>VISUAL</span> KREATIF
-        </a>
-
-        <div class="mobile-menu" onclick="toggleMenu()">
-            ☰
-        </div>
-
-        <div class="nav-menu" id="navMenu">
-
-            <a href="#home">Beranda</a>
-
-            <a href="#about">Tentang Kami</a>
-
-            <a href="#services">Apa yang Kami Lakukan</a>
-
-            <a href="#work">Pekerjaan Kami</a>
-
-            <a href="#partners">Partner</a>
-
-            <a href="#contact">Contact</a>
-
-            <a href="#contact" class="nav-button">
-                Mulai Kolaborasi
-            </a>
-
-        </div>
-
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#partners">Partners</a>
+      <a href="#contact">Contact</a>
     </div>
-
+  </div>
 </nav>
 
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero" id="home">
-
-    <div class="hero-light"></div>
-
-    <div class="container hero-content reveal">
-
-        <div class="hero-small">
-            Creative & Marketing Agency
-        </div>
-
-        <h1>
-            MENGUBAH IDE
-            <br>
-            <span>MENJADI GERAKAN.</span>
-        </h1>
-
-        <p class="hero-description">
-
-            Dunia Visual Kreatif adalah creative & marketing agency
-            yang membantu brand, music label, dan talent membangun
-            kampanye yang relevan, kreatif, dan menghasilkan dampak nyata.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#work" class="btn btn-primary">
-                Lihat Pekerjaan Kami
-            </a>
-
-            <a href="#contact" class="btn btn-secondary">
-                Mulai Kolaborasi
-            </a>
-
-        </div>
-
-        <div class="hero-tags">
-
-            Strategy • Creator • Affiliate • Music Marketing
-
-        </div>
-
+<main>
+  <!-- HOMEPAGE: upload homepage-bg.jpg -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="eyebrow">Creative thinking. Real execution.</div>
+      <h1>Creating Value <span>Beyond Ideas.</span></h1>
+      <p class="hero-description">
+        Dunia Visual Kreatif adalah creative & marketing agency yang membantu brand,
+        music label, dan talent membangun campaign yang relevan, kreatif, dan menghasilkan dampak nyata.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-filled" href="#work">Explore Our Work ↗</a>
+        <a class="btn" href="#contact">Let's Collaborate</a>
+      </div>
     </div>
+    <div class="hero-bottom">
+      <span>Strategy / Creative / Execution</span>
+      <span>Indonesia · Available for Collaboration</span>
+    </div>
+  </section>
 
-</section>
-
-
-<!-- =========================
-     BELIEF
-========================= -->
-
-<section class="belief">
-
-    <div class="container reveal">
-
-        <div class="section-label">
-            KAMI PERCAYA
-        </div>
-
-        <p class="quote">
-
-            “Ide yang baik bukan hanya tentang terlihat menarik.
-            Ide yang baik harus mampu bergerak, terhubung,
-            dan memberikan hasil.”
-
-        </p>
-
-        <p class="belief-text">
-
-            Di Dunia Visual Kreatif, kami percaya bahwa sebuah campaign
-            bukan sekadar tentang membuat konten.
-
-            <br><br>
-
-            Kami menggabungkan strategi, kreativitas, creator,
-            komunitas, dan eksekusi untuk menciptakan campaign
-            yang memiliki tujuan yang jelas.
-
-            <br><br>
-
+  <!-- WE BELIEVE: upload we-believe.jpg -->
+  <section class="section belief">
+    <div class="container belief-grid">
+      <div class="reveal">
+        <div class="eyebrow">01 / We Believe</div>
+        <h2>Good ideas should do more than <span class="gold">look good.</span></h2>
+        <div class="belief-copy">
+          <p>
+            Ide yang baik bukan hanya tentang terlihat menarik. Ide yang baik harus mampu bergerak,
+            terhubung, dan memberikan hasil.
+          </p>
+          <p>
+            Di Dunia Visual Kreatif, kami percaya bahwa sebuah campaign bukan sekadar tentang membuat konten.
+            Kami menggabungkan strategi, kreativitas, creator, komunitas, dan eksekusi untuk menciptakan
+            campaign yang memiliki tujuan yang jelas.
+          </p>
+          <p>
             Karena bagi kami, kreativitas bukan hanya tentang apa yang terlihat.
             Tetapi tentang apa yang terjadi setelahnya.
+          </p>
+        </div>
+      </div>
+      <div class="image-frame reveal">
+        <img src="we-believe.jpg" alt="Dunia Visual Kreatif — We Believe" loading="lazy">
+      </div>
+    </div>
+  </section>
 
+  <!-- ABOUT: upload about-us.jpg -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="image-frame reveal">
+        <img src="about-us.jpg" alt="Dunia Visual Kreatif — About Us" loading="lazy">
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">02 / About Us</div>
+        <h2>Creative thinking.<br><span class="gold">Real execution.</span></h2>
+        <div class="about-copy" style="margin-top:25px">
+          <p>
+            Dunia Visual Kreatif adalah creative & marketing agency yang berfokus pada pengembangan
+            strategi dan eksekusi campaign untuk brand, music label, dan talent.
+          </p>
+          <p>
+            Kami menghubungkan brand dengan creator, komunitas, dan audiens melalui pendekatan yang
+            strategis, relevan, dan berorientasi pada hasil.
+          </p>
+          <p>
+            Mulai dari perencanaan campaign, creator sourcing, affiliate activation, music marketing,
+            hingga campaign management, kami membantu mengubah ide menjadi aktivitas nyata yang
+            dapat diukur dampaknya.
+          </p>
+          <p>
+            Kami percaya bahwa setiap campaign memiliki tujuan yang berbeda. Karena itu, setiap
+            strategi dibangun berdasarkan kebutuhan, karakter audiens, dan target bisnis yang ingin dicapai.
+          </p>
+        </div>
+        <div class="process">
+          STRATEGY → CREATIVE → CREATOR → EXECUTION → RESULT
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="services-heading reveal">
+        <div>
+          <div class="eyebrow">03 / What We Do</div>
+          <h2>Ideas into <span class="gold">action.</span></h2>
+        </div>
+        <p class="section-intro">
+          Layanan yang dirancang untuk membantu brand dan talent membangun awareness,
+          menjangkau audiens, serta mendorong pertumbuhan.
         </p>
+      </div>
 
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-number">01 / COMMERCE</div>
+          <h3>Affiliate Marketing</h3>
+          <ul>
+            <li>TikTok Affiliate Campaign</li>
+            <li>Affiliate Creator Recruitment</li>
+            <li>Product Seeding & Sample Activation</li>
+            <li>GMV-Oriented Campaign Strategy</li>
+            <li>Creator Performance Monitoring</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">02 / CREATOR</div>
+          <h3>KOL & Creator Marketing</h3>
+          <ul>
+            <li>KOL & Creator Sourcing</li>
+            <li>Influencer Campaign Management</li>
+            <li>Creator Briefing & Coordination</li>
+            <li>Content Monitoring & Reporting</li>
+            <li>Brand Awareness Campaigns</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">03 / MUSIC</div>
+          <h3>Music Marketing</h3>
+          <ul>
+            <li>Music Discovery Campaigns</li>
+            <li>TikTok Music Promotion</li>
+            <li>Creator & Fanpage Activation</li>
+            <li>Artist & Label Campaign Support</li>
+            <li>Short-Form Video Campaigns</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">04 / STRATEGY</div>
+          <h3>Marketing Strategy</h3>
+          <ul>
+            <li>Campaign Planning</li>
+            <li>Audience & Creator Strategy</li>
+            <li>Budget Planning</li>
+            <li>Brand Positioning Support</li>
+            <li>Performance-Based Recommendations</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">05 / EXECUTION</div>
+          <h3>Campaign Management</h3>
+          <ul>
+            <li>End-to-End Campaign Execution</li>
+            <li>Creator Communication & Follow-Up</li>
+            <li>Timeline & Deliverable Management</li>
+            <li>Campaign Optimization</li>
+            <li>Performance Recap & Reporting</li>
+          </ul>
+        </article>
+      </div>
     </div>
+  </section>
 
-</section>
-
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about">
-
+  <!-- WORK: upload brand-campaigns.jpg, music-campaigns.jpg, creator-campaigns.jpg -->
+  <section class="section" id="work">
     <div class="container">
-
-        <div class="about-grid">
-
-            <div class="reveal">
-
-                <div class="section-label">
-                    TENTANG KAMI
-                </div>
-
-                <h2 class="section-title">
-                    Creative thinking.
-                    Real execution.
-                </h2>
-
-            </div>
-
-            <div class="about-text reveal">
-
-                Dunia Visual Kreatif adalah creative marketing agency
-                yang menghubungkan brand, creator, dan audience
-                melalui strategi yang relevan dengan budaya digital.
-
-                <br><br>
-
-                Kami bekerja di persimpangan antara marketing,
-                creator economy, social commerce, dan music culture.
-
-                <br><br>
-
-                Dengan pengalaman menangani campaign untuk berbagai
-                brand, music label, dan talent, kami memahami bagaimana
-                sebuah ide dapat diterjemahkan menjadi campaign
-                yang dapat dijalankan secara nyata.
-
-                <br><br>
-
-                Mulai dari menyusun strategi, memilih creator yang tepat,
-                melakukan negosiasi, mengelola campaign, hingga monitoring
-                dan reporting — kami membantu memastikan setiap campaign
-                berjalan dari ide hingga eksekusi.
-
-                <div class="strategy-line">
-
-                    STRATEGY → CREATIVE → CREATOR → EXECUTION → RESULT
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section id="services">
-
-    <div class="container">
-
-        <div class="reveal">
-
-            <div class="section-label">
-                APA YANG KAMI LAKUKAN
-            </div>
-
-            <h2 class="section-title">
-                Campaigns built
-                to move.
-            </h2>
-
-            <p class="section-description">
-
-                Kami membantu bisnis dan talent membangun campaign
-                yang relevan, terukur, dan mampu bergerak
-                di ekosistem digital.
-
-            </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-
-            <div class="service-card reveal">
-
-                <div class="service-number">01</div>
-
-                <h3>Affiliate Marketing</h3>
-
-                <p>
-                    Membangun dan mengelola campaign affiliate
-                    untuk membantu brand meningkatkan awareness,
-                    content volume, traffic, dan sales.
-                </p>
-
-                <ul class="service-list">
-
-                    <li>Affiliate Campaign Strategy</li>
-                    <li>Creator Recruitment</li>
-                    <li>Creator Activation</li>
-                    <li>Product Seeding</li>
-                    <li>Campaign Management</li>
-                    <li>Performance Monitoring</li>
-                    <li>Reporting</li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="service-card reveal">
-
-                <div class="service-number">02</div>
-
-                <h3>KOL & Creator Marketing</h3>
-
-                <p>
-                    Menghubungkan brand dengan creator yang relevan
-                    berdasarkan audience, content category,
-                    positioning, dan campaign objective.
-                </p>
-
-                <ul class="service-list">
-
-                    <li>Creator Research</li>
-                    <li>Creator Selection</li>
-                    <li>KOL Campaign</li>
-                    <li>Negotiation</li>
-                    <li>Briefing</li>
-                    <li>Content Monitoring</li>
-                    <li>Campaign Reporting</li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="service-card reveal">
-
-                <div class="service-number">03</div>
-
-                <h3>Music Marketing</h3>
-
-                <p>
-                    Membantu music label dan artist memperkenalkan
-                    musik kepada audience melalui creator
-                    dan social media.
-                </p>
-
-                <ul class="service-list">
-
-                    <li>Music Campaign Strategy</li>
-                    <li>TikTok Creator Campaign</li>
-                    <li>Music Discovery Campaign</li>
-                    <li>Artist / Release Promotion</li>
-                    <li>Fanpage Management</li>
-                    <li>Creator Activation</li>
-                    <li>Campaign Monitoring</li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="service-card reveal">
-
-                <div class="service-number">04</div>
-
-                <h3>Marketing Strategy</h3>
-
-                <p>
-                    Mengubah business objective menjadi strategi
-                    marketing yang dapat dijalankan.
-                </p>
-
-                <ul class="service-list">
-
-                    <li>Campaign Strategy</li>
-                    <li>Audience & Market Analysis</li>
-                    <li>Creator Strategy</li>
-                    <li>Content Strategy</li>
-                    <li>Campaign Planning</li>
-                    <li>Budget Planning</li>
-                    <li>Performance Analysis</li>
-
-                </ul>
-
-            </div>
-
-
-            <div class="service-card reveal">
-
-                <div class="service-number">05</div>
-
-                <h3>Campaign Management</h3>
-
-                <p>
-                    Dari awal hingga akhir, kami membantu mengelola
-                    campaign agar tetap berjalan sesuai timeline,
-                    brief, budget, dan objective.
-                </p>
-
-                <ul class="service-list">
-
-                    <li>Strategy</li>
-                    <li>Creator</li>
-                    <li>Execution</li>
-                    <li>Monitoring</li>
-                    <li>Reporting</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     WORK
-========================= -->
-
-<section id="work">
-
-    <div class="container">
-
-        <div class="reveal">
-
-            <div class="section-label">
-                PEKERJAAN KAMI
-            </div>
-
-            <h2 class="section-title">
-                Strategi yang kami buat.
-                Campaign yang kami jalankan.
-            </h2>
-
-            <p class="section-description">
-
-                Kami bekerja bersama brand, music label, dan talent
-                untuk membangun campaign melalui creator,
-                social commerce, dan digital marketing.
-
-            </p>
-
-        </div>
-
-
-        <div class="work-grid">
-
-
-            <div class="work-card reveal">
-
-                <div class="work-number">
-                    01
-                </div>
-
-                <h3>
-                    BRAND CAMPAIGNS
-                </h3>
-
-                <p>
-                    Creator & Affiliate Marketing
-                </p>
-
-            </div>
-
-
-            <div class="work-card reveal">
-
-                <div class="work-number">
-                    02
-                </div>
-
-                <h3>
-                    MUSIC CAMPAIGNS
-                </h3>
-
-                <p>
-                    Music Discovery & Artist Promotion
-                </p>
-
-            </div>
-
-
-            <div class="work-card reveal">
-
-                <div class="work-number">
-                    03
-                </div>
-
-                <h3>
-                    CREATOR CAMPAIGNS
-                </h3>
-
-                <p>
-                    KOL & Creator Activation
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     STATS
-========================= -->
-
-<section class="stats">
-
-    <div class="container">
-
-        <div class="stats-grid">
-
-            <div class="stat reveal">
-
-                <div class="stat-number">
-                    300K+
-                </div>
-
-                <div class="stat-label">
-                    CREATOR NETWORK
-                </div>
-
-            </div>
-
-
-            <div class="stat reveal">
-
-                <div class="stat-number">
-                    100+
-                </div>
-
-                <div class="stat-label">
-                    BRANDS HANDLED
-                </div>
-
-            </div>
-
-
-            <div class="stat reveal">
-
-                <div class="stat-number">
-                    4
-                </div>
-
-                <div class="stat-label">
-                    INTERNATIONAL MUSIC LABELS
-                </div>
-
-            </div>
-
-
-            <div class="stat reveal">
-
-                <div class="stat-number">
-                    25B+
-                </div>
-
-                <div class="stat-label">
-                    GMV GENERATED
-                </div>
-
-            </div>
-
-
-            <div class="stat reveal">
-
-                <div class="stat-number">
-                    1,500+
-                </div>
-
-                <div class="stat-label">
-                    CREATORS ACTIVATED
-                </div>
-
-            </div>
-
-
-            <div class="stat reveal">
-
-                <div class="stat-number">
-                    20+
-                </div>
-
-                <div class="stat-label">
-                    MUSIC CAMPAIGNS
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PARTNERS
-========================= -->
-
-<section id="partners">
-
-    <div class="container">
-
-        <div class="partners-header reveal">
-
-            <div>
-
-                <div class="section-label">
-                    PARTNERS
-                </div>
-
-                <h2 class="section-title">
-                    BRANDS, LABELS
-                    & TALENTS.
-                </h2>
-
-            </div>
-
-            <p class="section-description">
-
-                Kami pernah bekerja bersama berbagai brand,
-                music label, dan artist dalam menjalankan
-                campaign di Indonesia.
-
-            </p>
-
-        </div>
-
-
-        <!-- =====================
-             BRAND LOGOS
-        ====================== -->
-
-        <div class="partner-category reveal">
-
-            <h3>
-                BRANDS
-            </h3>
-
-            <div class="logo-grid">
-
-
-                <div class="logo-box">
-
-                    <img src="maybelline.png" alt="Maybelline">
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="implora.png"
-                        alt="Implora"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="sidomuncul.png"
-                        alt="Sido Muncul"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="veet.png"
-                        alt="Veet"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="somethinc.png"
-                        alt="Somethinc"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="purbasari.png"
-                        alt="Purbasari"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="shinzui.png"
-                        alt="Shinzui"
-                    >
-
-                </div>
-
-
-                <div class="logo-box more-brand">
-
-                    <span>
-                        +100 BRANDS
-                    </span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-        <!-- =====================
-             MUSIC LABEL LOGOS
-        ====================== -->
-
-        <div class="partner-category reveal">
-
-            <h3>
-                MUSIC LABELS
-            </h3>
-
-            <div class="logo-grid">
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="universal-music-group.png"
-                        alt="Universal Music Group"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="atlantic-records.png"
-                        alt="Atlantic Records"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="darkroom-records.png"
-                        alt="Darkroom Records"
-                    >
-
-                </div>
-
-
-                <div class="logo-box">
-
-                    <img
-                        src="interscope-records.png"
-                        alt="Interscope Records"
-                    >
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-    <div class="container reveal">
-
-        <div class="section-label">
-            CONTACT
-        </div>
-
-        <h2 class="section-title">
-
-            LET'S CREATE
-            SOMETHING
-            THAT MOVES.
-
-        </h2>
-
-        <p class="contact-description">
-
-            Punya brand yang ingin dikembangkan?
-
-            <br>
-
-            Campaign yang ingin dijalankan?
-
-            <br>
-
-            Atau musik yang ingin didengar lebih banyak orang?
-
-            <br><br>
-
-            Mari bicarakan bagaimana kita bisa bekerja bersama.
-
+      <div class="reveal">
+        <div class="eyebrow">04 / Selected Work</div>
+        <h2>Strategi yang kami buat.<br><span class="gold">Campaign yang kami jalankan.</span></h2>
+        <p class="section-intro">
+          Dari brand campaigns hingga music discovery, kami menghubungkan ide,
+          creator, dan audiens melalui eksekusi yang terarah.
         </p>
+      </div>
 
+      <div class="work-grid">
+        <article class="work-card reveal">
+          <div class="image-frame">
+            <img src="brand-campaigns.jpg" alt="Brand Campaigns" loading="lazy">
+          </div>
+          <div class="work-label">01 / Brand</div>
+          <h3>Brand Campaigns</h3>
+          <p>Campaign yang menghubungkan brand dengan creator dan audiens melalui pendekatan yang relevan.</p>
+        </article>
 
-        <div class="contact-info">
+        <article class="work-card reveal">
+          <div class="image-frame">
+            <img src="music-campaigns.jpg" alt="Music Campaigns" loading="lazy">
+          </div>
+          <div class="work-label">02 / Music</div>
+          <h3>Music Campaigns</h3>
+          <p>Creator-led music promotion untuk mendukung discovery dan percakapan seputar rilisan musik.</p>
+        </article>
 
-            <a
-                href="mailto:partnership@duniavisualkreatif.com"
-                class="contact-item"
-            >
-
-                partnership@duniavisualkreatif.com
-
-            </a>
-
-
-            <a
-                href="https://wa.me/6285285942855"
-                target="_blank"
-                class="contact-item"
-            >
-
-                WhatsApp +62 852-8594-2855
-
-            </a>
-
-        </div>
-
+        <article class="work-card reveal">
+          <div class="image-frame">
+            <img src="creator-campaigns.jpg" alt="Creator Campaigns" loading="lazy">
+          </div>
+          <div class="work-label">03 / Creator</div>
+          <h3>Creator Campaigns</h3>
+          <p>Aktivasi creator yang dikelola secara terstruktur dari sourcing hingga monitoring campaign.</p>
+        </article>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- PERFORMANCE -->
+  <section class="section stats">
+    <div class="container">
+      <div class="eyebrow reveal">05 / Our Impact</div>
+      <h2 class="reveal">Built on strategy.<br><span class="gold">Measured by impact.</span></h2>
 
+      <div class="stats-grid" style="margin-top:55px">
+        <div class="stat-item reveal">
+          <div class="stat-number">300K+</div>
+          <div class="stat-label">Creator Network</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Brands Handled</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">4</div>
+          <div class="stat-label">International Music Labels</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">25B+</div>
+          <div class="stat-label">GMV Generated</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">1,500+</div>
+          <div class="stat-label">Creators Activated</div>
+        </div>
+        <div class="stat-item reveal">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Music Campaigns</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+  <!-- PARTNERS -->
+  <section class="section partners" id="partners">
+    <div class="container">
+      <div class="eyebrow reveal">06 / Selected Partners</div>
+      <h2 class="reveal">Trusted by brands.<br><span class="gold">Connected through creativity.</span></h2>
+      <p class="section-intro reveal" style="margin-left:auto;margin-right:auto">
+        Pengalaman lintas kategori, dari beauty dan consumer brands hingga music labels dan artist campaigns.
+      </p>
+
+      <div class="partner-group reveal">
+        <div class="partner-heading">Brand Campaigns</div>
+        <div class="logo-grid">
+          <div class="logo-box"><img src="maybelline.png" alt="Maybelline" loading="lazy"></div>
+          <div class="logo-box"><img src="implora.png" alt="Implora" loading="lazy"></div>
+          <div class="logo-box"><img src="dettol.png" alt="Dettol" loading="lazy"></div>
+          <div class="logo-box"><img src="veet.png" alt="Veet" loading="lazy"></div>
+          <div class="logo-box"><img src="somethinc.png" alt="Somethinc" loading="lazy"></div>
+          <div class="logo-box"><img src="purbasari.png" alt="Purbasari" loading="lazy"></div>
+          <div class="logo-box"><img src="madame-gie.png" alt="Madame Gie" loading="lazy"></div>
+        </div>
+        <p style="color:var(--muted);font-size:12px;margin-top:18px">+100 brands across multiple categories</p>
+      </div>
+
+      <div class="partner-group reveal">
+        <div class="partner-heading">Music Label Campaigns</div>
+        <div class="logo-grid">
+          <div class="logo-box"><img src="universal-music-group.png" alt="Universal Music Group" loading="lazy"></div>
+          <div class="logo-box"><img src="atlantic-records.png" alt="Atlantic Records" loading="lazy"></div>
+          <div class="logo-box"><img src="darkroom-records.png" alt="Darkroom Records" loading="lazy"></div>
+          <div class="logo-box"><img src="interscope-records.png" alt="Interscope Records" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <div class="eyebrow">07 / Start a Conversation</div>
+        <h2>Let's create something<br><span class="gold">that moves people.</span></h2>
+        <p class="contact-text">
+          Punya campaign yang ingin dikembangkan? Kami terbuka untuk berdiskusi
+          tentang kebutuhan brand, music label, talent, dan creator campaign kamu.
+        </p>
+        <div style="margin-top:30px">
+          <a class="btn btn-filled" href="https://wa.me/6285285942855" target="_blank" rel="noopener">Discuss a Project ↗</a>
+        </div>
+      </div>
+
+      <div class="contact-details reveal">
+        <div class="contact-item">
+          <small>Email</small>
+          <a href="mailto:partnership@duniavisualkreatif.com">partnership@duniavisualkreatif.com</a>
+        </div>
+        <div class="contact-item">
+          <small>WhatsApp</small>
+          <a href="https://wa.me/6285285942855" target="_blank" rel="noopener">+62 852-8594-2855</a>
+        </div>
+        <div class="contact-item">
+          <small>Agency</small>
+          <span>Dunia Visual Kreatif</span>
+        </div>
+        <div class="contact-item">
+          <small>Focus</small>
+          <span>Creative · Marketing · Music · Commerce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-
-    <div class="container footer-content">
-
-        <div>
-
-            <div class="footer-logo">
-                DUNIA VISUAL KREATIF
-            </div>
-
-            <div class="footer-description">
-
-                Creative & Marketing Agency
-
-                <br><br>
-
-                Affiliate Marketing • Creator Marketing
-                • Music Marketing • Marketing Strategy
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-right">
-
-            © 2026 Dunia Visual Kreatif.
-            All Rights Reserved.
-
-        </div>
-
-    </div>
-
+  <div class="container footer-inner">
+    <div>DUNIA VISUAL KREATIF © <span id="year"></span></div>
+    <div>Creative thinking. Real execution.</div>
+  </div>
 </footer>
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-/* MOBILE MENU */
-
-function toggleMenu() {
-
-    const menu = document.getElementById("navMenu");
-
-    menu.classList.toggle("active");
-
-}
-
-
-/* CLOSE MOBILE MENU */
-
-document.querySelectorAll(".nav-menu a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        document
-            .getElementById("navMenu")
-            .classList.remove("active");
-
-    });
-
+menuToggle.addEventListener("click", function () {
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "×" : "☰";
 });
 
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
 
-/* SCROLL REVEAL */
+document.getElementById("year").textContent = new Date().getFullYear();
 
-const observer = new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("active");
-
-            }
-
-        });
-
-    },
-
-    {
-        threshold: 0.12
+const revealObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.12 });
 
-);
-
-
-document.querySelectorAll(".reveal").forEach(element => {
-
-    observer.observe(element);
-
+document.querySelectorAll(".reveal").forEach(function (element) {
+  revealObserver.observe(element);
 });
-
-
-/* MOUSE PARALLAX */
-
-document.addEventListener("mousemove", e => {
-
-    const x =
-        (e.clientX / window.innerWidth - 0.5) * 20;
-
-    const y =
-        (e.clientY / window.innerHeight - 0.5) * 20;
-
-    const light =
-        document.querySelector(".hero-light");
-
-    if (light) {
-
-        light.style.marginLeft = `${x}px`;
-        light.style.marginTop = `${y}px`;
-
-    }
-
-});
-
 </script>
 
 </body>
