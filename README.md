@@ -662,24 +662,24 @@ section {
     opacity: 1;
 }
 
+```css
 /* ACTUAL LOGOS */
 
 .logo-box img {
     position: relative;
     z-index: 2;
+
+    display: block;
     max-width: 150px;
     max-height: 55px;
     width: auto;
     height: auto;
     object-fit: contain;
 
-    /* membuat logo terlihat clean & premium */
-    filter:
-        grayscale(100%)
-        brightness(0)
-        invert(1);
-
-    opacity: 0.65;
+    /* Logo tetap terlihat tanpa hover */
+    filter: grayscale(100%) brightness(0) invert(1);
+    opacity: 0.85;
+    visibility: visible;
 
     transition:
         transform 0.4s ease,
@@ -687,11 +687,13 @@ section {
         filter 0.4s ease;
 }
 
+/* Hover effect */
 .logo-box:hover img {
     filter: none;
     opacity: 1;
     transform: scale(1.07);
 }
+```
 
 /* =========================
    CONTACT
