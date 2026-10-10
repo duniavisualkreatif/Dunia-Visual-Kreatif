@@ -845,11 +845,18 @@ a {
 #partners .logo-box {
   height: 100px;
   padding: 5px;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  box-sizing: border-box;
+
+  /* Background putih agar logo lebih jelas */
+  background: #ffffff;
+  border: 1px solid rgba(212, 175, 90, 0.35);
+
+  transition: background 0.25s ease;
 }
 
 #partners .logo-box img {
@@ -857,21 +864,11 @@ a {
   height: 90px !important;
   max-width: none !important;
   max-height: none !important;
+
   object-fit: contain;
   object-position: center;
   display: block;
   margin: 0;
-}
-
-@media (max-width: 520px) {
-  #partners .logo-box {
-    height: 84px;
-    padding: 4px;
-  }
-
-  #partners .logo-box img {
-    height: 76px !important;
-  }
 }
 ```
 /* Hover halus */
