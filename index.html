@@ -1153,41 +1153,46 @@ a {
     </div>
   </section>
 
-  <!-- PERFORMANCE -->
-  <section class="section stats">
-    <div class="container">
-      <div class="eyebrow reveal">05 / Our Impact</div>
-      <h2 class="reveal">Built on strategy.<br><span class="gold">Measured by impact.</span></h2>
 
-      <div class="stats-grid" style="margin-top:55px">
-        <div class="stat-item reveal">
-          <div class="stat-number">300K+</div>
-          <div class="stat-label">Creator Network</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number">100+</div>
-          <div class="stat-label">Brands Handled</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number">4</div>
-          <div class="stat-label">International Music Labels</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number">25B+</div>
-          <div class="stat-label">GMV Generated</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number">1,500+</div>
-          <div class="stat-label">Creators Activated</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Music Campaigns</div>
-        </div>
+<!-- PERFORMANCE -->
+<section class="section stats">
+  <div class="container">
+    <div class="eyebrow reveal">05 / Our Impact</div>
+    <h2 class="reveal">Built on strategy.<br><span class="gold">Measured by impact.</span></h2>
+
+    <div class="stats-grid" style="margin-top:55px">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="300" data-suffix="K+">300K+</div>
+        <div class="stat-label">Creator Network</div>
+      </div>
+
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="100" data-suffix="+">100+</div>
+        <div class="stat-label">Brands Handled</div>
+      </div>
+
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="4">4</div>
+        <div class="stat-label">International Music Labels</div>
+      </div>
+
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="25" data-suffix="B+">25B+</div>
+        <div class="stat-label">GMV Generated</div>
+      </div>
+
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="1500" data-suffix="+" data-format="comma">1,500+</div>
+        <div class="stat-label">Creators Activated</div>
+      </div>
+
+      <div class="stat-item reveal">
+        <div class="stat-number" data-target="20" data-suffix="+">20+</div>
+        <div class="stat-label">Music Campaigns</div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
   
 <!-- PARTNERS -->
 <section class="section partners" id="partners">
@@ -1367,6 +1372,68 @@ const revealObserver = new IntersectionObserver(function (entries) {
 document.querySelectorAll(".reveal").forEach(function (element) {
   revealObserver.observe(element);
 });
+  
+/* DVK — OUR IMPACT COUNT-UP */
+(() => {
+  const stats = document.querySelectorAll(
+    ".stats .stat-number[data-target]"
+  );
+
+  if (!stats.length) return;
+
+  const duration = 1800;
+  let started = false;
+
+  function startCountUp() {
+    if (started) return;
+    started = true;
+
+    stats.forEach((el) => {
+      const target = Number(el.dataset.target);
+      const suffix = el.dataset.suffix || "";
+      const useComma = el.dataset.format === "comma";
+      const startTime = performance.now();
+
+      function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+
+        // Gerakan cepat di awal, lalu melambat di akhir
+        const eased = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(target * eased);
+
+        const number = useComma
+          ? current.toLocaleString("en-US")
+          : current.toLocaleString("en-US");
+
+        el.textContent = number + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent =
+            target.toLocaleString("en-US") + suffix;
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  const impactSection = document.querySelector(".stats");
+
+  if ("IntersectionObserver" in window && impactSection) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        startCountUp();
+        observer.disconnect();
+      }
+    }, { threshold: 0.2 });
+
+    observer.observe(impactSection);
+  } else {
+    startCountUp();
+  }
+})();
 </script>
 
 </body>
