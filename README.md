@@ -5,7 +5,7 @@
 
 <title>Dunia Visual Kreatif — Creative & Marketing Agency</title>
 
-<meta name="description" content="Dunia Visual Kreatif adalah creative & marketing agency yang membantu brand, music label, dan talent membangun campaign yang relevan, kreatif, dan menghasilkan dampak nyata.">
+<meta name="description" content="Dunia Visual Kreatif adalah creative & marketing agency yang membantu brand, music label, dan talent membangun campaign yang relevan, kreatif, dan menghasilkan dampak nyata">
 
 <style>
 
