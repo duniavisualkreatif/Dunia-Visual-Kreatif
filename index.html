@@ -1111,20 +1111,89 @@ a {
     letter-spacing: 0.5px;
   }
 }
+  
+/* DVK NAVBAR LOGO */
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+nav .logo-image {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+nav .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+nav .logo-text strong {
+  color: #f3e4c5;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  line-height: 1.3;
+}
+
+nav .logo-text > span {
+  color: #c7a56a;
+  font-size: 9px;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+@media (max-width: 480px) {
+  nav .logo {
+    gap: 8px;
+  }
+
+  nav .logo-image {
+    width: 36px;
+    height: 36px;
+  }
+
+  nav .logo-text strong {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  nav .logo-text > span {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
 
 </style>
 </head>
 
 <body>
 
+
 <nav>
   <div class="container nav-inner">
     <a class="logo" href="#home">
-      DUNIA VISUAL KREATIF
-      <span>CREATIVE & MARKETING</span>
+      <img
+        src="/dvk-logo.png"
+        alt="Logo Dunia Visual Kreatif"
+        class="logo-image"
+      >
+      <span class="logo-text">
+        <strong>DUNIA VISUAL KREATIF</strong>
+        <span>CREATIVE & MARKETING</span>
+      </span>
     </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Buka menu" aria-expanded="false">☰</button>
 
     <div class="nav-links" id="navLinks">
       <a href="#about">About</a>
@@ -1133,6 +1202,8 @@ a {
       <a href="#partners">Partners</a>
       <a href="#contact">Contact</a>
     </div>
+  </div>
+</nav>
   </div>
 </nav>
 
