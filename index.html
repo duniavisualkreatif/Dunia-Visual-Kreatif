@@ -796,6 +796,116 @@ a {
     background-position: 0% 50%;
   }
 }
+  
+/* ========================================
+   DVK PARTNERS - LOGO GRID
+   ======================================== */
+
+/* Grid brand */
+#partners .logo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+/* Grid music labels */
+#partners .music-logo-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Kotak logo: semua sama tinggi */
+#partners .logo-box {
+  width: 100%;
+  height: 100px;
+  min-width: 0;
+  padding: 14px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 90, 0.18);
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Gambar logo: ukuran seragam dan proporsional */
+#partners .logo-box img {
+  display: block;
+  width: 100%;
+  height: 56px;
+  max-width: 150px;
+
+  object-fit: contain;
+  object-position: center;
+
+  margin: auto;
+}
+
+/* Hover halus */
+#partners .logo-box:hover {
+  border-color: rgba(212, 175, 90, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Jarak antar kategori */
+#partners .partner-group + .partner-group {
+  margin-top: 46px;
+}
+
+/* Keterangan jumlah brand */
+#partners .partner-count {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  #partners .logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #partners .music-logo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* HP */
+@media (max-width: 520px) {
+  #partners .logo-grid,
+  #partners .music-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #partners .logo-box {
+    height: 84px;
+    padding: 10px;
+  }
+
+  #partners .logo-box img {
+    height: 48px;
+    max-width: 130px;
+  }
+
+  #partners .partner-group + .partner-group {
+    margin-top: 36px;
+  }
+}
+
 </style>
 </head>
 
@@ -1060,40 +1170,82 @@ a {
     </div>
   </section>
 
-  <!-- PARTNERS -->
-  <section class="section partners" id="partners">
-    <div class="container">
-      <div class="eyebrow reveal">06 / Selected Partners</div>
-      <h2 class="reveal">Trusted by brands.<br><span class="gold">Connected through creativity.</span></h2>
-      <p class="section-intro reveal" style="margin-left:auto;margin-right:auto">
-        Pengalaman lintas kategori, dari beauty dan consumer brands hingga music labels dan artist campaigns.
-      </p>
+  
+<!-- PARTNERS -->
+<section class="section partners" id="partners">
+  <div class="container">
+    <div class="eyebrow reveal">06 / Selected Partners</div>
 
-      <div class="partner-group reveal">
-        <div class="partner-heading">Brand Campaigns</div>
-        <div class="logo-grid">
-          <div class="logo-box"><img src="maybelline.png" alt="Maybelline" loading="lazy"></div>
-          <div class="logo-box"><img src="implora.png" alt="Implora" loading="lazy"></div>
-          <div class="logo-box"><img src="dettol.png" alt="Dettol" loading="lazy"></div>
-          <div class="logo-box"><img src="veet.png" alt="Veet" loading="lazy"></div>
-          <div class="logo-box"><img src="somethinc.png" alt="Somethinc" loading="lazy"></div>
-          <div class="logo-box"><img src="purbasari.png" alt="Purbasari" loading="lazy"></div>
-          <div class="logo-box"><img src="madame-gie.png" alt="Madame Gie" loading="lazy"></div>
+    <h2 class="reveal">
+      Trusted by brands.<br>
+      <span class="gold">Connected through creativity.</span>
+    </h2>
+
+    <p class="section-intro reveal"
+       style="margin-left:auto;margin-right:auto">
+      Pengalaman lintas kategori, dari beauty dan consumer brands
+      hingga music labels dan artist campaigns.
+    </p>
+
+    <!-- BRAND CAMPAIGNS -->
+    <div class="partner-group reveal">
+      <div class="partner-heading">Brand Campaigns</div>
+
+      <div class="logo-grid">
+        <div class="logo-box">
+          <img src="image/maybelline.png" alt="Maybelline" loading="lazy">
         </div>
-        <p style="color:var(--muted);font-size:12px;margin-top:18px">+100 brands across multiple categories</p>
+        <div class="logo-box">
+          <img src="image/implora.png" alt="Implora" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/dettol.png" alt="Dettol" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/veet.png" alt="Veet" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/somethinc.png" alt="Somethinc" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/purbasari.png" alt="Purbasari" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/madame-gie.png" alt="Madame Gie" loading="lazy">
+        </div>
       </div>
 
-      <div class="partner-group reveal">
-        <div class="partner-heading">Music Label Campaigns</div>
-        <div class="logo-grid">
-          <div class="logo-box"><img src="universal-music-group.png" alt="Universal Music Group" loading="lazy"></div>
-          <div class="logo-box"><img src="atlantic-records.png" alt="Atlantic Records" loading="lazy"></div>
-          <div class="logo-box"><img src="darkroom-records.png" alt="Darkroom Records" loading="lazy"></div>
-          <div class="logo-box"><img src="interscope-records.png" alt="Interscope Records" loading="lazy"></div>
+      <p class="partner-count">
+        +100 brands across multiple categories
+      </p>
+    </div>
+
+    <!-- MUSIC LABEL CAMPAIGNS -->
+    <div class="partner-group reveal">
+      <div class="partner-heading">Music Label Campaigns</div>
+
+      <div class="logo-grid music-logo-grid">
+        <div class="logo-box">
+          <img src="image/universal-music-group.png"
+               alt="Universal Music Group" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/atlantic-records.png"
+               alt="Atlantic Records" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/darkroom-records.png"
+               alt="Darkroom Records" loading="lazy">
+        </div>
+        <div class="logo-box">
+          <img src="image/interscope-records.png"
+               alt="Interscope Records" loading="lazy">
         </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section class="section contact" id="contact">
